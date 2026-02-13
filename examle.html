@@ -1,0 +1,11 @@
+<!-- Autocomplete enabled for the entire form -->
+<form action="/submit" method="post" autocomplete="on">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+
+    <!-- Autocomplete specifically disabled for this email field -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off" />
+
+    <input type="submit" />
+</form>

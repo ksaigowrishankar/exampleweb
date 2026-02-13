@@ -1,0 +1,81 @@
+/* style.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: monospace;
+}
+
+h1 {
+  color: #0d6efd;
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 20px 0;
+}
+.card h2 {
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+.card p {
+  margin-bottom: 15px;
+}
+.card a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card h3 ~ p {
+  background-color: #0d6efd;
+}
+.card input {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #050c16;
+}
+/* .css
+
+selector 
+{ 
+property: value;
+1. basic selector
+  i>universal selector
+  ii>type selector or tag seletor
+  iii>class selector  
+  iv>id selector
+.classname
+#idname
+2. combinator selector s1 s2 s3
+  i>descendant selector
+  ii>child selector
+  iii>adjacent sibling selector
+  iv>general sibling selector
+}
+  3. attribute selector 
+
+a
+
+*/

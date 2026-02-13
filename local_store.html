@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage Demo</title>
+</head>
+
+<body>
+
+    <h2>localStorage – Save data in browser</h2>
+
+    <label>
+        Your name:
+        <input type="text" id="nameInput" placeholder="Type here...">
+    </label>
+    <button onclick="saveName()">Save</button>
+    <button onclick="clearName()">Clear</button>
+
+    <p>Saved name: <strong id="display">— nothing saved yet —</strong></p>
+
+    <script>
+        function saveName() {
+            const name = document.getElementById('nameInput').value.trim();
+            if (name) {
+                localStorage.setItem('userName', name);
+                updateDisplay();
+                alert('Saved! ✓');
+            }
+        }
+
+        function clearName() {
+            localStorage.removeItem('userName');
+            updateDisplay();
+            alert('Cleared!');
+        }
+
+        function updateDisplay() {
+            const saved = localStorage.getItem('userName');
+            document.getElementById('display').textContent = saved || '— nothing saved yet —';
+        }
+
+        // Load saved value when page opens
+        updateDisplay();
+    </script>
+
+</body>
+
+</html>

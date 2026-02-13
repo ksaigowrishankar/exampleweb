@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form - Detailed Learning Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 25px;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        .required::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Registration Form</h1>
+
+        <!-- 
+            <form> is the main container for all input elements
+            Important attributes:
+            - action = where to send the data (URL)
+            - method = how to send data (GET or POST)
+            
+            - novalidate = disables browser's default validation (for custom validation)
+        -->
+        <form action="/submit-registration" method="POST" novalidate>
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname" class="required">Full Name</label>
+                <!-- 
+                    type="text" → normal text input
+                    id → connects label to input (accessibility)
+                    name → name of the field when sent to server
+                    required → browser will not allow submit if empty
+                    placeholder → hint text
+                    maxlength → maximum characters allowed
+                    minlength → minimum characters required
+                    autocomplete → helps browser suggest values
+                    
+                -->
+                <input type="text" id="fullname" name="full_name" placeholder="Enter your full name" required
+                    minlength="2" maxlength="100" autocomplete="name">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <!-- 
+                    type="email" → browser validates email format
+                    pattern → custom regex validation (optional)
+                -->
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required
+                    autocomplete="email">
+            </div>
+
+            <!-- 
+                    type="email" → browser validates email format
+                    pattern → custom regex validation (optional)
+                -->
+            <input type="color" id="email" name="email" placeholder="example@domain.com" required autocomplete="email">
+    </div>
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password" class="required">Password</label>
+        <!-- 
+                    type="password" → hides characters
+                -->
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8"
+            autocomplete="new-password">
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="form-group">
+        <label for="confirm-password" class="required">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm_password" placeholder="Re-enter password" required
+            autocomplete="new-password">
+    </div>
+    <div class="form-group">
+        <label for="rating" class="required">Confirm Password</label>
+        <input type="range" id="confirm-password" name="confirm_password" placeholder="Re-enter password" required
+            autocomplete="new-password">
+    </div>
+    <div class="form-group">
+        <label for="upload" class="required">Confirm Password</label>
+        <input type="file" id="confirm-password" name="confirm_password" placeholder="Re-enter password" required
+            autocomplete="new-password">
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <!-- 
+                    type="tel" → optimized for phone numbers (shows numeric keyboard on mobile)
+                    pattern → enforces format
+                -->
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +91 98765 43210" pattern="[0-9]{10,15}"
+            title="Phone number should be 10-15 digits">
+    </div>
+
+    <!-- Date of Birth -->
+    <div class="form-group">
+        <label for="dob" class="required">Date of Birth</label>
+        <!-- 
+                    type="date" → shows date picker
+                -->
+        <input type="date" id="dob" name="date_of_birth" required max="2008-01-01"
+            title="You must be at least 18 years old">
+        <!-- example: must be at
+                    least 18 years old -->
+    </div>
+    <div class="form-group">
+        <label for="dob" class="required">Date of Birth</label>
+        <!-- 
+                    type="date" → shows date picker
+                -->
+        <input type="month" id="dob" name="date_of_birth" required max="2008-01-01"
+            title="You must be at least 18 years old">
+        <!-- example: must be at
+                    least 18 years old -->
+    </div>
+    <div class="form-group">
+        <label for="dob" class="required">Date of Birth</label>
+        <!-- 
+                    type="date" → shows date picker
+                -->
+        <input type="datetime-local" id="dob" name="date_of_birth" required max="2008-01-01"
+            title="You must be at least 18 years old">
+        <!-- example: must be at
+                    least 18 years old -->
+    </div>
+    <!-- Gender (radio buttons) -->
+    <div class="form-group">
+        <label class="required">Gender</label>
+        <div class="gender-group">
+            <!-- 
+                        type="radio" → only one can be selected in the same name group
+                        value → what gets sent to server
+                    -->
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+    </div>
+
+    <!-- Country (dropdown) -->
+    <div class="form-group">
+        <label for="country">Country</label>
+        <!-- 
+                    <select> → dropdown list
+                    <option> → each choice
+                -->
+        <select id="country" name="country">
+            <option value="">Select your country</option>
+            <option value="IN">India</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="CA">Canada</option>
+            <option value="AU">Australia</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <!-- About / Bio -->
+    <div class="form-group">
+        <label for="bio">About Yourself (optional)</label>
+        <!-- 
+                    <textarea> → multi-line text input
+                -->
+        <textarea id="bio" name="bio" rows="2" placeholder="Tell us something about yourself..."></textarea>
+    </div>
+
+    <!-- Terms & Conditions -->
+    <div class="form-group">
+        <!-- 
+                    type="checkbox" → can select multiple (or none)
+                -->
+        <label>
+            <input type="checkbox" name="terms" value="accepted" required>
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Create Account</button>
+
+    <!-- 
+                Other useful button types:
+                type="reset"  → clears the form
+                type="button" → does nothing by default (used with JavaScript)
+            -->
+
+    </form>
+    </div>
+
+</body>
+
+</html>

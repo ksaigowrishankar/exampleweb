@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Basics</title>
+</head>
+
+<body>
+
+  <h2>Inline SVG Example</h2>
+
+  <svg width="700" height="300" viewBox="-100 0 400 300">
+    <rect x="50" y="50" width="120" height="80" fill="royalblue" stroke="black" stroke-width="3" />
+
+    <circle cx="280" cy="100" r="60" fill="tomato" stroke="black" stroke-width="3" />
+
+    <text x="80" y="250" font-size="32" font-weight="bold" fill="darkgreen">
+      Hello SVG!
+    </text>
+  </svg>
+
+  <!-- You can also use SVG as image -->
+  <img src="data:image/svg+xml;utf8,<svg width='200' height='200'>
+    <circle cx='100' cy='100' r='80' fill='orange'/>
+    <text x='50' y='115' font-size='60' fill='white'>SVG</text>
+  </svg>" alt="inline svg">
+
+</body>
+
+</html>

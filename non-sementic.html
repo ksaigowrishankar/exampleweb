@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Landing Page (div & span version)</title>
+
+    <style>
+        :root {
+            --primary: #0066cc;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ffdd57;
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-text {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #444;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #0052a3;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.3);
+        }
+
+        .section {
+            padding: 8rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .contact-item-title {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .contact-item-text {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .contact-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-link {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<div></div>
+<Span></Span>
+
+<body>
+
+    <div class="header">
+        <div class="nav">
+            <div class="logo">NON SEMENTIC</div>
+
+            <ul class="nav-list">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="./sementic.html" class="nav-link">Semantic</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+
+        <div class="hero" id="hero">
+            <div>
+                <h1>Build something <br>amazing today</h1>
+                <p class="hero-text">
+                    A clean, modern single-page website built with only div and span elements.
+                </p>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+        </div>
+
+        <div class="section" id="features">
+            <div class="section-title">Why Choose Us?</div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-title">No Semantic HTML</div>
+                    <p>Uses only div and span — classic 2000s-style markup structure.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-title">Same Look & Feel</div>
+                    <p>Visually identical to the semantic version — styling stays the same.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-title">Modern Styling</div>
+                    <p>Gradients, shadows, hover effects — all kept intact.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="section-title">About This Page</div>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.3rem; text-align: center;">
+                This version shows how the exact same visual result can be achieved using only
+                <span style="color: #d32f2f; font-weight: bold;">div</span> and
+                <span style="color: #d32f2f; font-weight: bold;">span</span>
+                elements instead of proper semantic tags.
+            </p>
+        </div>
+
+        <div class="section" id="contact">
+            <div class="section-title">Get in <span style="color: #d32f2f; font-weight: bold;">Touch</span></div>
+
+            <div class="contact-wrapper">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-item-title">Email</div>
+                        <p class="contact-item-text">
+                            <a href="mailto:hello@yourbrand.com" class="contact-link">hello@yourbrand.com</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-title">Phone</div>
+                        <p class="contact-item-text">
+                            <a href="tel:+919876543210" class="contact-link">+91 987 654 3210</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-title">Address</div>
+                        <p class="contact-item-text">
+                            123 Innovation Street,<br>Tech Valley, Hyderabad, TS 500081
+                        </p>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-size: 1.1rem; color: #555;">
+                    We'd love to hear from you! Drop us a message anytime.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Your Brand • Built with only div & span</p>
+        <p>
+            <a href="mailto:hello@yourbrand.com" class="footer-link">Email Us</a> •
+            <a href="https://twitter.com/yourbrand" class="footer-link">Twitter</a> •
+            <a href="https://github.com/yourbrand" class="footer-link">GitHub</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
